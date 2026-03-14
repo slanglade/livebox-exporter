@@ -1,11 +1,10 @@
 {
     "name": "Livebox Exporter Dev",
-    "image": "golang:1-alpine",
+    "image": "mcr.microsoft.com/devcontainers/go:1",
     "mounts": [
         "source=${localEnv:HOME}/.gitconfig,target=/root/.gitconfig,type=bind,consistency=cached",
         "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
     ],
-    "postCreateCommand": "apk add --no-cache git",
     "customizations": {
         "vscode": {
             "extensions": ["golang.go"]
